@@ -2,19 +2,18 @@
 import React, { useEffect, useState } from 'react';
 import Card from './card';
 import ServiceCards from './service-cards';
-import {  AnimatedTestimonialsDemo } from './testimonials';
-import Showcase from './tabs';
+import { AnimatedTestimonialsDemo } from './testimonials';
+import Showcase, { HeroScrollDemo } from './advertise';
 
 const Features = () => {
     const [state, setState] = useState()
-    useEffect(()=>{
+    useEffect(() => {
         setState(true)
-    })
+    }, [])
+    
     return (
         <>
-            
-            <Showcase />
-
+            <HeroScrollDemo />
             <div className='max-w-6xl mx-auto p-6'>
                 <span className='text-3xl font-semibold flex items-center justify-start'>
                     Start your home loan journey here
@@ -49,9 +48,7 @@ const Features = () => {
             {
                 state ? <AnimatedTestimonialsDemo /> : ""
             }
-            
         </>
-
     );
 };
 

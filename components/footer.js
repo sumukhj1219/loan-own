@@ -3,7 +3,7 @@ import { FaWhatsapp, FaEnvelope, FaGlobe, FaFacebook, FaInstagram, FaLinkedin } 
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-blue-500 to-blue-800 text-white py-6 px-4">
+    <footer className="bg-gradient-to-r from-green-900 to-green-800 via-green-600 text-white py-6 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Logo and Name Section */}
         <div className="flex flex-col items-start md:items-center">
