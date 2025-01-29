@@ -43,7 +43,7 @@ const Card = () => {
           </div>
 
           <div className="p-4 flex justify-center">
-            <button className="text-white bg-green-900 p-2 rounded-lg">
+            <button className="text-white bg-blue-500 p-2 rounded-lg">
               Get Started
             </button>
           </div>
