@@ -10,7 +10,6 @@ const LandingPage = () => {
     <div>
       <Header />
         <Features />
-        <Footer />
     </div>
   )
 }

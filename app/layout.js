@@ -1,17 +1,11 @@
-import { Roboto, IBM_Plex_Sans } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-
-const roboto = Roboto({
-  variable: "--font-roboto",
+import Footer from "@/components/footer";
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // You can add weights depending on the font's style
-});
-
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"], // Include light, regular, or bold weights
+  weight: ["400"], // Bebas Neue only supports a single weight
 });
 
 export const metadata = {
@@ -22,7 +16,7 @@ export const metadata = {
     description: "Loan & Own Mortgages",
     images: [
       {
-        url: "/logo-loan.jpg",  
+        url: "/logo-loan.jpg",
         width: 1260,
         height: 800,
         alt: "Loan & Own Brand Image",
@@ -34,11 +28,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={` ${ibmPlexSans.variable} antialiased`}
-      >
+      <body className={`${bebasNeue.variable} antialiased`}>
         <Navbar />
         <div className="pt-20">{children}</div>
+        <Footer />
+
       </body>
     </html>
   );
