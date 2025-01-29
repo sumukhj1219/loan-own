@@ -8,9 +8,7 @@ import { DotBackgroundDemo } from './grids'
 const LandingPage = () => {
   return (
     <div>
-      <DotBackgroundDemo>
       <Header />
-      </DotBackgroundDemo>
         <Features />
         <Footer />
     </div>

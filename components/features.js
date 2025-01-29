@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './card';
 import ServiceCards from './service-cards';
 import { AnimatedTestimonialsDemo } from './testimonials';
-import Showcase, { HeroScrollDemo } from './advertise';
+import { CarouselDemo } from './carousel-f';
 
 const Features = () => {
     const [state, setState] = useState()
@@ -13,7 +13,8 @@ const Features = () => {
     
     return (
         <>
-            <HeroScrollDemo />
+            {/* <HeroScrollDemo /> */}
+            <CarouselDemo />
             <div className='max-w-6xl mx-auto p-6'>
                 <span className='text-3xl font-semibold flex items-center justify-start'>
                     Start your home loan journey here
