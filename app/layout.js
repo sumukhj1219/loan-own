@@ -20,14 +20,14 @@ export const metadata = {
   openGraph: {
     title: "Loan & Own | Mortgages",
     description: "Loan & Own Mortgages",
-    // images: [
-    //   {
-    //     url: "/logo-loan.jpg",  
-    //     width: 1260,
-    //     height: 800,
-    //     alt: "Loan & Own Brand Image",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/logo-loan.jpg",  
+        width: 1260,
+        height: 800,
+        alt: "Loan & Own Brand Image",
+      },
+    ],
   },
 };
 

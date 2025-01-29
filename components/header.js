@@ -6,7 +6,7 @@ const Header = () => {
       <div className="text-center relative top-[-20%] sm:top-[-10%]">
         <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-black">
           Unlock Your{" "}
-          <span className="bg-gradient-to-r from-green-900 via-yellow-400 to-green-900 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-orange-400 text-transparent bg-clip-text">
             Dream
           </span>{" "}
           Home

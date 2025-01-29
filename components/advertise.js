@@ -14,11 +14,11 @@ export function HeroScrollDemo() {
               <br />
               <span className="text-4xl sm:text-5xl md:text-[6rem] font-bold leading-none">
                 Your{" "}
-                <span className="bg-gradient-to-r from-green-900 via-yellow-400 to-green-900 text-transparent bg-clip-text">
+                <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-orange-400 text-transparent bg-clip-text">
                   Path
                 </span>{" "}
                 to{" "}
-                <span className="bg-gradient-to-r from-green-900 via-yellow-400 to-green-900 text-transparent bg-clip-text">
+                <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-orange-400 text-transparent bg-clip-text">
                   Homeownership
                 </span>
               </span>
