@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -18,6 +19,7 @@ const Navbar = () => {
     <nav className="w-full h-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-full px-6">
         {/* Logo Section */}
+        <Link href={'/'}>
         <div className="flex items-center space-x-3">
           <Image
             src={"/logo-loan.jpg"}
@@ -33,7 +35,8 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-
+        </Link>
+        
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg">
           {items.map((item, index) => (
