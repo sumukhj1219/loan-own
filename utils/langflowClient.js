@@ -69,7 +69,7 @@ class LangflowClient {
       } catch (error) {
         console.error('Error running flow:', error);
         onError('Error initiating session');
-        throw error;
+        throw error
       }
     }
   }
