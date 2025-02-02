@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from './card';
 import ServiceCards from './service-cards';
-import { AnimatedTestimonialsDemo } from './testimonials';
+import { AnimatedTestimonialsDemo, InfiniteMovingCardsDemo } from './testimonials';
 import { CarouselDemo } from './carousel-f';
 
 const Features = () => {
@@ -47,7 +47,7 @@ const Features = () => {
             </div>
 
             {
-                state ? <AnimatedTestimonialsDemo /> : ""
+                state ? <InfiniteMovingCardsDemo/> : ""
             }
         </>
     );

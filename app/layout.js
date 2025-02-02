@@ -2,6 +2,8 @@ import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Chatbot from "@/components/chatbot";
+
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
   subsets: ["latin"],
@@ -31,9 +33,10 @@ export default function RootLayout({ children }) {
       <body className={`${bebasNeue.variable} antialiased`}>
         <Navbar />
         <div className="pt-20">{children}</div>
+        <Chatbot />
         <Footer />
-
       </body>
+
     </html>
   );
 }

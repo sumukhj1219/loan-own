@@ -9,9 +9,9 @@ const Navbar = () => {
   const items = [
     { name: "OUR BUSINESS", link: "#business" },
     { name: "OUR SERVICES", link: "#services" },
-    { name: "FAQ's", link: "#faqs" },
-    { name: "HOME CALCULATOR'S", link: "#calculators" },
     { name: "CONTACT US", link: "/contact" },
+    { name: "HOME CALCULATOR'S", link: "#calculators" },
+    { name: "FAQ's", link: "#faqs" },
     { name: "BLOG", link: "/blog" },
   ];
 
