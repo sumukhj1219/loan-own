@@ -34,6 +34,7 @@ export const metadata = {
   keywords: [
     "home loans",
     "mortgages",
+    "australian loans",
     "loan financing",
     "mortgage brokers",
     "first-time home buyers",
