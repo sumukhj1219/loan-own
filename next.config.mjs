@@ -11,19 +11,19 @@ const nextConfig = {
     experimental: {
       optimizeCss: true, 
     },
-    async headers() {
-      return [
-        {
-          source: "/(.*)",
-          headers: [
-            {
-              key: "Cache-Control",
-              value: "public, max-age=31536000, immutable", // ✅ Improves page speed by caching resources
-            },
-          ],
-        },
-      ];
-    },
+    // async headers() {
+    //   return [
+    //     {
+    //       source: "/(.*)",
+    //       headers: [
+    //         {
+    //           key: "Cache-Control",
+    //           value: "public, max-age=31536000, immutable", // ✅ Improves page speed by caching resources
+    //         },
+    //       ],
+    //     },
+    //   ];
+    // },
     // async redirects() {
     //   return [
     //     {
