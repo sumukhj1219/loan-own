@@ -4,12 +4,14 @@ import React from 'react';
 const Header = () => {
   return (
     <div className="w-full h-[100vh] relative">
-      <Image 
+      <Image
         src="/sydney.jpg"
-        layout="fill"
-        objectFit="cover"
+        width={1920}
+        height={1080}
         alt="Sydney"
-        priority
+        quality={80}  
+        priority      
+        format="webp"  
       />
 
       <div className="absolute inset-0 bg-gradient-to-tl from-black via-transparent to-transparent opacity-50"></div>
