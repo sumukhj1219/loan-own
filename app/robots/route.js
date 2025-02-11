@@ -3,7 +3,7 @@ export async function GET() {
   Disallow: /admin
   Allow: /
   
-  Sitemap: http://localhost:3000/sitemap.xml`;
+  Sitemap: https://www.lnomortgages.com.au/sitemap.xml`;
   
     return new Response(robotsTxt, {
       headers: {

@@ -1,5 +1,5 @@
 export async function GET() {
-    const baseUrl = "http://localhost:3000";
+    const baseUrl = "https://www.lnomortgages.com.au/";
   
     const pages = ["", "about", "services", "contact", "blog"];
   
