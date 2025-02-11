@@ -8,9 +8,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    optimizeCss: true, // ✅ Minifies & removes unused CSS
-  },
 };
 
 export default nextConfig;
