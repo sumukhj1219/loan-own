@@ -73,7 +73,39 @@ Nett of offset:
 If you have a linked offset account with your loan the broker is only paid trail commission based on the difference between the loan balance and the offset balance at any point in the life of the loan.
 
 For example, if you draw down a loan of $500,000 but have $400,000 in the offset account at any point then the trail payment is only paid on the $100,000 difference, if the offset has $500,000 funds from the settlement date deposited then there will be no upfront commission paid either.`
-        }
+        },
+        {
+            question:"What does a mortgage broker do?",
+            answer:"A mortgage broker helps you find and secure the best home loan by comparing options from multiple lenders, handling paperwork, and negotiating rates on your behalf."
+        },
+        {
+            question:"Why should I use a mortgage broker instead of going directly to a bank?",
+            answer:"Brokers offer access to many lenders and loan products, often securing better rates and terms than a single bank"
+        },
+        {
+            question:"How do mortgage brokers get paid?",
+            answer:"Brokers typically receive a commission from the lender when a loan is settled, which means their services are usually free for borrowers."
+        },
+        {
+            question:"Do mortgage brokers charge a fee?",
+            answer:"In most cases, brokers do not charge borrowers a direct fee. However, some may charge a fee for complex cases. Always ask upfront"
+        },
+        {
+            question:"Is using a mortgage broker safe?",
+            answer:"Yes, licensed mortgage brokers in Australia follow strict regulations set by ASIC and are often members of industry bodies like FBAA or MFAA."
+        },
+        {
+            question:"What is the minimum deposit required for a home loan?",
+            answer:"Most lenders require at least a 5–10% deposit, but a 20% deposit helps you avoid Lenders Mortgage Insurance (LMI)."
+        },
+        {
+            question:"What is Lenders Mortgage Insurance (LMI)?",
+            answer:"LMI is a fee charged by lenders when your deposit is less than 20%. It protects the lender if you default on the loan"
+        },
+        {
+            question:"How much can I borrow?",
+            answer:"Your borrowing capacity depends on factors like income, expenses, credit score, and existing debts. A mortgage broker can assess your situation."
+        },
 ]
 
 const FaqQuestions = () => {
