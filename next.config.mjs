@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"], // ✅ Use modern image formats
+    formats: ["image/avif", "image/webp"], 
     remotePatterns: [
       {
-        hostname: "images.unsplash.com", // ✅ Allow external images from Unsplash
+        hostname: "images.unsplash.com",
+        hostname: "cdn.sanity.io" 
       },
     ],
   },
