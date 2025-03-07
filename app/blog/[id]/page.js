@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { PortableText } from "@portabletext/react";
 
 export async function generateStaticParams() {
   const query = `*[_type == "blog" || _type == "event"]{slug}`;
@@ -15,6 +16,7 @@ async function getItem(id) {
     const query = `*[_type in ["blog", "event"] && slug.current == $id][0]{
       title, 
       description, 
+      content,
       "imageUrl": mainImage.asset->url
     }`;
     return await client.fetch(query, { id });
@@ -56,6 +58,9 @@ export default async function DetailPage({ params }) {
         <CardContent>
           <div className="mt-6 border-t border-gray-300 pt-6">
             <p className="text-gray-700 text-lg leading-relaxed text-justify">{item.description}</p>
+          </div>
+          <div className="mt-6 text-gray-800 text-base leading-relaxed">
+            <PortableText value={item.content} />
           </div>
         </CardContent>
       </Card>
