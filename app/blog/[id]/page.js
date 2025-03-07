@@ -5,60 +5,64 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export async function generateStaticParams() {
-  const query = `*[_type == "blog"]{slug}`;
-  const blogs = await client.fetch(query);
-  return blogs.map((blog) => ({ id: blog.slug.current }));
+  const query = `*[_type == "blog" || _type == "event"]{slug}`;
+  const items = await client.fetch(query);
+  return items.map((item) => ({ id: item.slug.current }));
 }
 
-async function getBlog(id) {
+async function getItem(id) {
   try {
-    const query = `*[_type == "blog" && slug.current == $id][0]{
+    const query = `*[_type in ["blog", "event"] && slug.current == $id][0]{
       title, 
       description, 
       "imageUrl": mainImage.asset->url
     }`;
     return await client.fetch(query, { id });
   } catch (error) {
-    console.error("Error fetching blog:", error);
+    console.error("Error fetching item:", error);
     return null;
   }
 }
 
-export default async function BlogDetail({ params }) {
-  const blog = await getBlog(await params.id);
+export default async function DetailPage({ params }) {
+  const item = await getItem(await params.id);
 
-  if (!blog) {
+  if (!item) {
     return (
       <div className="flex justify-center items-center h-64">
-        <p className="text-gray-500">Blog not found.</p>
+        <p className="text-gray-500">Content not found.</p>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-6 py-10">
-      <Card className="max-w-3xl mx-auto p-6">
-        {blog.imageUrl && (
-          <Image
-            src={blog.imageUrl}
-            alt={blog.title}
-            width={800}
-            height={400}
-            className="w-full h-64 object-cover rounded-lg"
-            priority
-          />
+    <div className="container mx-auto px-6 py-12">
+      <Card className="max-w-4xl mx-auto p-8 border border-gray-200 shadow-md">
+        {item.imageUrl && (
+          <div className="mb-6">
+            <Image
+              src={item.imageUrl}
+              alt={item.title}
+              width={900}
+              height={450}
+              className="w-full h-72 object-cover rounded-md"
+              priority
+            />
+          </div>
         )}
         <CardHeader>
-          <CardTitle className="text-3xl">{blog.title}</CardTitle>
+          <CardTitle className="text-3xl font-bold text-gray-900 text-center">{item.title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-gray-600 text-lg">{blog.description}</p>
+          <div className="mt-6 border-t border-gray-300 pt-6">
+            <p className="text-gray-700 text-lg leading-relaxed text-justify">{item.description}</p>
+          </div>
         </CardContent>
       </Card>
 
-      <div className="mt-6 text-center">
+      <div className="mt-8 text-center">
         <Button asChild variant="outline">
-          <Link href="/blog">← Back to Blogs</Link>
+          <Link href="/blog">← Back to Listings</Link>
         </Button>
       </div>
     </div>
