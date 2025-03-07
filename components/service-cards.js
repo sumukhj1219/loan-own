@@ -93,7 +93,7 @@ const ServiceCards = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto p-6 flex flex-wrap gap-x-6 justify-center">
+    <div className="max-w-6xl mx-auto p-6 flex flex-wrap gap-x-6 justify-center" id="services">
       {items.map((item) => (
         <div
           key={item.image}

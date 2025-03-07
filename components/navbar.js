@@ -8,12 +8,21 @@ const Navbar = () => {
 
   const items = [
     { name: "OUR BUSINESS", link: "/business" },
-    { name: "OUR SERVICES", link: "/" },
+    { name: "OUR SERVICES", link: "#services" }, 
     { name: "CONTACT US", link: "/contact" },
     { name: "HOME CALCULATOR'S", link: "/calculators" },
     { name: "FAQ's", link: "/faqs" },
     { name: "BLOG", link: "/blog" }
   ];
+
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="w-full h-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-md fixed top-0 left-0 z-50">
@@ -39,12 +48,21 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-8 text-lg">
           {items.map((item, index) => (
             <li key={index}>
-              <Link
-                href={item.link}
-                className="text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
-              >
-                {item.name}
-              </Link>
+              {item.link.startsWith("#") ? (
+                <button
+                  onClick={(e) => handleScroll(e, item.link.substring(1))}
+                  className="text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  href={item.link}
+                  className="text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
           <Link
@@ -70,21 +88,29 @@ const Navbar = () => {
           <ul className="space-y-4">
             {items.map((item, index) => (
               <li key={index}>
-                <Link
-                  href={item.link}
-                  className="block text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                {item.link.startsWith("#") ? (
+                  <button
+                    onClick={(e) => handleScroll(e, item.link.substring(1))}
+                    className="block text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.link}
+                    className="block text-white font-medium hover:text-yellow-400 hover:underline transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
         </div>
-
       )}
-
     </nav>
   );
-}
-export default Navbar
+};
+
+export default Navbar;
