@@ -13,7 +13,6 @@ const Features = () => {
     
     return (
         <>
-            {/* <HeroScrollDemo /> */}
             <CarouselDemo />
             <div className='max-w-6xl mx-auto p-6'>
                 <span className='text-3xl font-semibold flex items-center justify-start'>
@@ -27,8 +26,8 @@ const Features = () => {
             <Card />
 
             <div className='max-w-6xl mx-auto p-6'>
-                <span className='text-3xl font-semibold flex items-center justify-start'>
-                    Our services
+                <span className='text-3xl font-semibold flex items-center justify-start' id="services">
+                    OUR SERVICES
                 </span>
                 <span className='text-lg font-thin'>
                     With a range of services on offer, Finance Home Loans strives to be your one stop shop for your financial needs.
