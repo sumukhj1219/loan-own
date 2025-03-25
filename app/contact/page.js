@@ -4,21 +4,22 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { QRCodeCanvas } from 'qrcode.react';
 import Image from 'next/image';
+import CalendlyWidget from '@/components/calendyWidget';
 
 const ContactPage = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100 p-4">
       <Card className="w-full max-w-md shadow-xl">
         <div className='flex items-center justify-center mx-auto '>
-        <Image
-        className='rounded-full mt-10'
-        src={'/mohit-gupta.jpg'}
-        alt='founder'
-        width={70}
-        height={70}
-        />
+          <Image
+            className='rounded-full mt-10'
+            src={'/mohit-gupta.jpg'}
+            alt='founder'
+            width={70}
+            height={70}
+          />
         </div>
-       
+
         <CardHeader>
           <CardTitle className="text-center text-xl font-bold">Get in Touch</CardTitle>
         </CardHeader>
@@ -35,7 +36,11 @@ const ContactPage = () => {
           >
             <FaWhatsapp size={24} />
             <span>+61 401 234 567</span>
+
           </a>
+          <div className='flex items-center justify-center mx-auto m-4'>
+            <CalendlyWidget />
+          </div>
         </CardContent>
       </Card>
     </div>
