@@ -9,4 +9,3 @@ export const client = createClient({
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
 
-console.log(projectId)

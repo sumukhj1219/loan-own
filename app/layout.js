@@ -2,7 +2,8 @@ import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import Chatbot from "@/components/chatbot";
+// import Chatbot from "@/components/chatbot";
+import Script from "next/script";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -14,23 +15,6 @@ export const metadata = {
   title: "Loan & Own Mortgages | Easy Home Loans & Financing",
   description:
     "Get the best mortgage rates and home loan options with Loan & Own Mortgages. Easy financing solutions tailored for you.",
-  script: [
-    {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Loan & Own Mortgages",
-        "url": "https://www.lnomortgages.com.au",
-        "logo": "https://www.lnomortgages.com.au/logo-loan.jpg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+61-123-456-789",
-          "contactType": "Customer Support",
-        },
-      }),
-    },
-  ],
   keywords: [
     "home loans",
     "mortgages",
@@ -55,20 +39,43 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <Script
+          id="linkedin-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              _linkedin_partner_id = "7217332";
+              window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+              window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+            `,
+          }}
+        />
+        <Script
+          id="linkedin-script"
+          src="https://snap.licdn.com/li.lms-analytics/insight.min.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`${bebasNeue.variable} antialiased`}>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=7217332&fmt=gif"
+          />
+        </noscript>
         <Navbar />
         <div className="pt-20">{children}</div>
-        <Chatbot />
+        {/* <Chatbot /> */}
         <Footer />
       </body>
-
     </html>
   );
 }

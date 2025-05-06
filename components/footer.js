@@ -1,11 +1,19 @@
+import { Separator } from "@/@/components/ui/separator";
+import Link from "next/link";
 import React from "react";
-import { FaWhatsapp, FaEnvelope, FaGlobe, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaGlobe,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-8 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
         <div className="flex flex-col items-center md:items-start">
           <img
             src="/logo-loan.jpg"
@@ -19,13 +27,19 @@ const Footer = () => {
         <div className="text-center md:text-left space-y-3">
           <p className="flex items-center justify-center md:justify-start space-x-2 text-lg">
             <FaWhatsapp className="text-yellow-400" />
-            <a href="tel:+61413219624" className="hover:underline hover:text-yellow-400 transition">
+            <a
+              href="tel:+61413219624"
+              className="hover:underline hover:text-yellow-400 transition"
+            >
               +610413219624
             </a>
           </p>
           <p className="flex items-center justify-center md:justify-start space-x-2 text-lg">
             <FaEnvelope className="text-yellow-400" />
-            <a href="mailto:mohitg@lnomortgages.com.au" className="hover:underline hover:text-yellow-400 transition">
+            <a
+              href="mailto:mohitg@lnomortgages.com.au"
+              className="hover:underline hover:text-yellow-400 transition"
+            >
               mohitg@lnomortgages.com.au
             </a>
           </p>
@@ -73,8 +87,19 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Loan & Own Mortgages. All Rights Reserved.
+      <Separator className="border my-4" />
+
+      <div className=" mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm space-y-2 md:space-y-0">
+        <p className="text-center text-xs md:text-left px-2">
+          © Copyright 2024. All Rights Reserved. Loan and Own Mortgages Pty Ltd ABN 50 677 151 923
+          under Credit Representative Number 562355 of Australian Credit Licence Number 384704.
+          Member of the FBAA of Australia
+        </p>
+        <div className="flex items-center justify-center space-x-4 px-2 text-xs">
+          <Link href="/privacy-policy" className="hover:underline hover:text-yellow-400">Privacy Policy</Link>
+          <Link href="/terms-conditions" className="hover:underline hover:text-yellow-400">Terms & Conditions</Link>
+          <Link href="/disclaimer" className="hover:underline hover:text-yellow-400">Disclaimer</Link>
+        </div>
       </div>
     </footer>
   );
