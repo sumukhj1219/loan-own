@@ -71,7 +71,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center text-white rounded-lg shadow-md transition"
           >
-            <span>+61 401 234 567</span>
+            <span>+61 041 321 9624</span>
           </Link>
         </ul>
 

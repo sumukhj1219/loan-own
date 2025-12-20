@@ -93,7 +93,7 @@ const Footer = () => {
         <p className="text-center text-xs md:text-left px-2">
           © Copyright 2024. All Rights Reserved. Loan and Own Mortgages Pty Ltd ABN 50 677 151 923
           under Credit Representative Number 562355 of Australian Credit Licence Number 384704.
-          Member of the FBAA of Australia
+          Member of the FBAA M-357731 of Australia
         </p>
         <div className="flex items-center justify-center space-x-4 px-2 text-xs">
           <Link href="/privacy-policy" className="hover:underline hover:text-yellow-400">Privacy Policy</Link>
