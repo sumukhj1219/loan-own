@@ -3,6 +3,7 @@ import React from 'react'
 import Features from './features'
 // import Footer from './footer'
 import Header from './header'
+import CalendlyInline from './calendlyInline'
 // import { DotBackgroundDemo } from './grids'
 
 const LandingPage = () => {
@@ -10,6 +11,7 @@ const LandingPage = () => {
     <div>
       <Header />
       <Features />
+      <CalendlyInline />
     </div>
   )
 }

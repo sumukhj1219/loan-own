@@ -8,11 +8,12 @@ const Navbar = () => {
 
   const items = [
     { name: "OUR BUSINESS", link: "/business" },
-    { name: "OUR SERVICES", link: "#services" }, 
+    { name: "OUR SERVICES", link: "#services" },
     { name: "CONTACT US", link: "/contact" },
     { name: "HOME CALCULATOR'S", link: "/calculators" },
     { name: "FAQ's", link: "/faqs" },
-    { name: "BLOG", link: "/blog" }
+    { name: "BLOG", link: "/blog" },
+    { name: "BOOK APPOINTMENT", link: "/book-appointment", cta: true },
   ];
 
   const handleScroll = (e, targetId) => {
@@ -45,7 +46,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <ul className="hidden md:flex space-x-8 text-lg">
+        <ul className="hidden md:flex space-x-8 text-lg items-center">
           {items.map((item, index) => (
             <li key={index}>
               {item.link.startsWith("#") ? (
@@ -55,6 +56,13 @@ const Navbar = () => {
                 >
                   {item.name}
                 </button>
+              ) : item.cta ? (
+                <Link
+                  href={item.link}
+                  className="bg-yellow-400 text-gray-900 font-bold px-4 py-2 rounded-full hover:bg-yellow-300 transition-all duration-300 whitespace-nowrap"
+                >
+                  {item.name}
+                </Link>
               ) : (
                 <Link
                   href={item.link}
@@ -95,6 +103,14 @@ const Navbar = () => {
                   >
                     {item.name}
                   </button>
+                ) : item.cta ? (
+                  <Link
+                    href={item.link}
+                    className="inline-block bg-yellow-400 text-gray-900 font-bold px-4 py-2 rounded-full hover:bg-yellow-300 transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
                 ) : (
                   <Link
                     href={item.link}
