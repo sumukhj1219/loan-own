@@ -20,7 +20,7 @@ export default function BookAppointment() {
           Book an Appointment
         </h1>
         <p className="text-yellow-400 text-center mb-8 text-lg">
-          Schedule a free consultation with our mortgage specialists
+          Schedule free consultation with our mortgage specialists
         </p>
 
         <div
