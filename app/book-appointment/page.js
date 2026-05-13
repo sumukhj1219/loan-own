@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import Script from "next/script";
 
 export default function BookAppointment() {
@@ -12,6 +13,10 @@ export default function BookAppointment() {
       });
     }
   };
+
+  useEffect(() => {
+    initWidget();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-950 pt-24 pb-16 px-4">

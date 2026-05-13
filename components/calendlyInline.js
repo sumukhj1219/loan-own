@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import Script from "next/script";
 
 export default function CalendlyInline() {
@@ -12,6 +13,10 @@ export default function CalendlyInline() {
       });
     }
   };
+
+  useEffect(() => {
+    initWidget();
+  }, []);
 
   return (
     <section className="bg-gray-950 py-16 px-4" id="book-appointment">
