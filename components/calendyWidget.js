@@ -2,10 +2,12 @@
 import Script from 'next/script';
 import { Button } from './ui/button';
 import { Calendar } from 'lucide-react';
+import { CALENDLY_URL } from '@/lib/calendly';
+
 export default function CalendlyWidget() {
   function handleClick() {
     window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/mohitg-lnomortgages/15min',
+      url: CALENDLY_URL,
     });
     return false;
   }

@@ -1,11 +1,12 @@
 "use client";
 import Script from "next/script";
+import { CALENDLY_URL } from "@/lib/calendly";
 
 export default function BookAppointment() {
   const initWidget = () => {
     if (window.Calendly) {
       window.Calendly.initInlineWidget({
-        url: "https://calendly.com/topaussiebroker/discovery_call",
+        url: CALENDLY_URL,
         parentElement: document.getElementById("calendly-book-page"),
         prefill: {},
         utm: {},
