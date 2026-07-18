@@ -6,7 +6,7 @@ export default function CalendlyInline() {
   const initWidget = () => {
     if (window.Calendly) {
       window.Calendly.initInlineWidget({
-        url: "https://calendly.com/topaussiebroker/discovery_call",
+        url: "https://calendly.com/topaussiebroker/lead-discovery-call",
         parentElement: document.getElementById("calendly-home"),
         prefill: {},
         utm: {},
