@@ -6,7 +6,7 @@ export default function BookAppointment() {
   const initWidget = () => {
     if (window.Calendly) {
       window.Calendly.initInlineWidget({
-        url: "https://calendly.com/topaussiebroker/discovery_call",
+        url: "https://calendly.com/topaussiebroker/full-mortgage-assessment",
         parentElement: document.getElementById("calendly-book-page"),
         prefill: {},
         utm: {},
